@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    background-color: var(--transparent-white);
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.container {
+    width: 950%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.card {
+    padding: 40px;
+    height: 450px;
+    position: relative;
+}
+
+.card__img {
+    padding-bottom: 30px;
+}
+
+.card h1 {
+    font-family: 'Big Shoulders Display', sans-serif;
+    text-transform: uppercase;
+    color: var(--light-gray);
+    padding-bottom: 30px;
+}
+
+.card p{
+    color: var(--transparent-white);
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+    /* padding-bottom: 30px; */
+}
+
+.card__btn {
+    width: 130px;
+    position: absolute;
+    bottom: 50px;
+    padding: 15px;
+    border: 0;
+    border-radius: 30px;
+    background-color: var(--light-gray);
+    outline: none;
+}
+
+.card__btn--sedans {
+    color: var(--orange);
+}
+
+.card__btn--sedans:hover {
+    background-color: var(--orange);
+    border: 2px solid var(--light-gray);
+    color: var(--light-gray);
+}
+
+.card__btn--suvs {
+    color: var(--dark-cyan);
+}
+
+.card__btn--suvs:hover {
+    background-color: var(--dark-cyan);
+    border: 2px solid var(--light-gray);
+    color: var(--light-gray);
+}
+
+.card__btn--luxury {
+    color: var(--very-dark-cyan);
+}
+
+.card__btn--luxury:hover {
+    background-color: var(--very-dark-cyandark-cyan);
+    border: 2px solid var(--light-gray);
+    color: var(--light-gray);
+}
+
+.card--sedans {
+    background-color: var(--orange);
+}
+
+.card--suvs {
+    background-color: var(--dark-cyan);
+}
+
+.card--luxury {
+    background-color: var(--very-dark-cyan);
+}
+
+@media (min-width:768px){
+    body {
+        height: 100vh;
+    }
+    
+    .container {
+        display: flex;
+        width: 100%;
+        height: 500px;
+    }
+
+    .card {
+       height: 500px;
+    }
+
+    .card p{
+        /* padding-bottom: 40px; */
+    }
+}
+
+@media (min-width: 1024px){
+    .container {
+        display: flex;
+        max-width: 920px;
+        max-height: 500px;
+    }
+
+    .card {
+       max-height: 500px;
+       max-width: 305px;
+    }
+
+    .card p{
+        /* padding-bottom: 40px; */
+    }
+}
